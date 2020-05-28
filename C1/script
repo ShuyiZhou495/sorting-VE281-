@@ -1,0 +1,9 @@
+
+for i in 10 100 1000 10000 100000 1000000 10000000
+do
+	echo "now size $i"
+	for n in {1...20}
+	do
+		./main<array0>out0
+	done
+done
