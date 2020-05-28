@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <ctime>
-#include <clock>
 using namespace std;
 
 
@@ -182,6 +181,7 @@ main()
     int* array = new int[arraySize];
     for(int i = 0; i < arraySize ; i++) cin>>array[i];
     // Sort
+	clock_t t = clock();
     switch (whichSort) {
         case 0:
             bubble(array, arraySize);
@@ -201,6 +201,7 @@ main()
         default:quicksort_in_place(array, 0, arraySize - 1);
 
     }
+//	cout << clock() - t<< endl;
     // Save to output.
     for (int i = 0; i < arraySize; i++) cout<<array[i]<<endl;
     // Release memory.

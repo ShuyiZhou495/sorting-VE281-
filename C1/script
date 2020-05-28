@@ -1,9 +1,16 @@
 
-for i in 10 100 1000 10000 100000 1000000 10000000
+for i in 10 100 1000 10000 20000 40000 80000
 do
 	echo "now size $i"
-	for n in {1...20}
+	for n in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
 	do
-		./main<array0>out0
+		./generate $i
+		echo "$n :"
+		./main<array0
+		./main<array1
+		./main<array2
+		./main<array3
+		./main<array4
+		./main<array5
 	done
 done

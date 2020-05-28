@@ -1,0 +1,20 @@
+for i in 10 100 1000 10000 20000 40000
+do
+	echo "now size $i"
+	for n in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+	do
+		./generate $i
+		echo "$n :"
+		./main<array0>out0
+		./main<array1>out1
+		./main<array2>out2
+		./main<array3>out3
+		./main<array4>out4
+		./main<array5>out5
+		diff out0 out1
+		diff out0 out2
+		diff out0 out3
+		diff out0 out4
+		diff out0 out5
+	done
+done
